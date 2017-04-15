@@ -2,8 +2,8 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
-import { RouterModule } from '@angular/router';
 
+import { AppRoutingModule } from './app.router';
 import { AppComponent } from './app.component';
 import { ProductsComponent } from './products/products.component';
 import { MembersComponent } from './members/members.component';
@@ -20,21 +20,7 @@ import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
     BrowserModule,
     FormsModule,
     HttpModule,
-    RouterModule.forRoot([
-      {
-        path:'members',
-        component:MembersComponent
-      },
-       {
-        path:'products',
-        component:ProductsComponent
-      },
-      { path: '',   redirectTo: '/members', pathMatch: 'full' },
-      {
-        path:'**',
-        component:PagenotfoundComponent
-      }
-    ])
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]
