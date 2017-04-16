@@ -6,6 +6,7 @@ import { HttpModule } from '@angular/http';
 import { AppRoutingModule } from './app.router';
 import { AppComponent } from './app.component';
 import { ProductsComponent } from './products/products.component';
+import { ProductComponent } from './products/product.component';
 import { MembersComponent } from './members/members.component';
 import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
 
@@ -13,6 +14,7 @@ import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
   declarations: [
     AppComponent,
     ProductsComponent,
+    ProductComponent,
     MembersComponent,
     PagenotfoundComponent
   ],
