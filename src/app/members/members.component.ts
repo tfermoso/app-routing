@@ -12,4 +12,8 @@ export class MembersComponent implements OnInit {
   ngOnInit() {
   }
 
+  onSubmit(form:any):void{
+    console.log('El formulario tiene',form);
+  }
+
 }
