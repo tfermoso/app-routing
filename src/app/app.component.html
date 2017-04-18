@@ -1,10 +1,32 @@
-<h1>
-  {{title}}
-</h1>
+<div class="container">
+  <div class="jumbotron">
+    <h1>Welcome</h1>
+    <h2>Angular & bootstrap</h2>
+  </div>
+  <div class="panel panel-primary">
+    <div class="panel panel-heading">
+      Routing
+    </div>
+    <div class="panel panel-body">
+      <h3>{{title}}</h3>
+      <nav class="navbar navbar-default">
+        <ul class="nav navbar-nav">
+          <li>
+            <a routerLink="/members" routerLinkActive="active">Members</a>
+          </li>
+          <li>
+            <a routerLink="/products" routerLinkActive="active">Products</a>
+          </li>
+        </ul>
 
-<a routerLink="/members" routerLinkActive="active">Members</a>
-<a routerLink="/products" routerLinkActive="active">Products</a>
 
-<br>
+      </nav>
 
-<router-outlet></router-outlet>
+
+      <br>
+
+      <router-outlet></router-outlet>
+    </div>
+  </div>
+
+</div>
