@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 
 import { AppRoutingModule } from './app.router';
@@ -11,6 +11,7 @@ import { MembersComponent } from './members/members.component';
 import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
 
 import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
+import { ReactiveFormComponent } from './reactive-form/reactive-form.component';
 
 @NgModule({
   declarations: [
@@ -18,11 +19,14 @@ import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
     ProductsComponent,
     ProductComponent,
     MembersComponent,
-    PagenotfoundComponent
+    ReactiveFormComponent,
+    PagenotfoundComponent,
+    ReactiveFormComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
+    ReactiveFormsModule,
     HttpModule,
     AppRoutingModule,
     NgbModule.forRoot(),
