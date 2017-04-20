@@ -9,8 +9,8 @@ import { ProductsComponent } from './products/products.component';
 import { ProductComponent } from './products/product.component';
 import { MembersComponent } from './members/members.component';
 import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
-
-import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
+import { ProductosComponent } from './products/productos.component';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { ReactiveFormComponent } from './reactive-form/reactive-form.component';
 
 @NgModule({
@@ -21,7 +21,8 @@ import { ReactiveFormComponent } from './reactive-form/reactive-form.component';
     MembersComponent,
     ReactiveFormComponent,
     PagenotfoundComponent,
-    ReactiveFormComponent
+    ReactiveFormComponent,
+    ProductosComponent,
   ],
   imports: [
     BrowserModule,
