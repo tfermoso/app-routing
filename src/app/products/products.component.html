@@ -25,7 +25,8 @@
   </ngb-tab>
    <ngb-tab title="Lista de productos" >
     <template ngbTabContent>
-      <lista-productos></lista-productos>
+      <lista-productos [productos]="products"></lista-productos>
+      <detalleProducto></detalleProducto>
     </template>
   </ngb-tab>
 </ngb-tabset>
