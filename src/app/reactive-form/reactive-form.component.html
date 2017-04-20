@@ -2,17 +2,40 @@
   <div class="form-group">
     <label for="nameInput">Nombre</label>
     <input class="form-control" type="text" name="nombre" id="nameInput" 
-    placeholder="Nombre" formControlName="name"/>
+    placeholder="Nombre" formControlName="name" #refName/>
+    <b>{{refName.className}}</b>
+    <div *ngIf="userform.controls['name'].hasError('minlength')" class="alert alert-danger">
+      Tiene que tener al menos 4 caracteres
+    </div>
+    <div *ngIf="userform.controls['name'].hasError('maxlength')" class="alert alert-danger">
+      Tiene que tener como máximo 10 caracteres
+    </div>
   </div>
    <div class="form-group">
     <label for="apellidosInput">Apellidos</label>
     <input class="form-control" type="text" name="apellidos" id="apellidosInput" 
     placeholder="Apellidos"  formControlName="apellidos"/>
+    <div *ngIf="userform.controls['apellidos'].hasError('required')" class="alert alert-danger">
+      Introduce los apellidos
+    </div>
   </div>
    <div class="form-group">
     <label for="emailInput">Email</label>
     <input class="form-control" type="email" name="email" id="emailInput" 
     placeholder="Email"  formControlName="email"/>
+    <div *ngIf="userform.controls['email'].hasError('email')" class="alert alert-danger">
+      Introduce un email válido
+    </div>
+
   </div>
-  <button class="btn btn-success" type="submit">Submit</button>
+  <div class="form-group">
+    <label for="postalCodeInput">Código postal</label>
+    <input class="form-control" type="text" name="postalCode" id="postalCodeInput" 
+    placeholder="Código postal"  formControlName="postalCode"/>
+    <div *ngIf="userform.controls['postalCode'].hasError('pattern')" class="alert alert-danger">
+      Valor no válido
+    </div>
+    
+  </div>
+  <button class="btn btn-success" [disabled]="!userform.valid" type="submit">Submit</button>
 </form>
